@@ -6,12 +6,8 @@ const refs = {
 
 refs.slider.addEventListener('click', onSliderClick);
 
-refs.sliderBtn.hidden = false;
-
 function onSliderClick() {
-  // refs.sliderBtn.hidden = true;
   const fundsMenu = document.getElementById('fundsList');
-  // const fundsContainer = document.getElementById('container');
 
   fundsMenu.classList.toggle('active');
   updateContainerHeight();
@@ -25,12 +21,12 @@ function updateContainerHeight() {
   const isExpended = fundsMenu.classList.contains('active');
   if (isExpended) {
     const totalHeight = Array.from(listOfFunds).reduce(
-      (acc, fund) => acc + fund.clientHeight,
+      (acc, fund) => acc + refs.fund.clientHeight,
       0
     );
     fundsContainer.style.height = `${totalHeight}px`;
   } else {
-    fundsContainer.style.height = '0';
+    fundsContainer.style.remove('active');
   }
 }
 

@@ -1,7 +1,5 @@
 section {
   margin: auto auto;
-  margin-top: 352px;
-
   width: 335px;
   height: 352px;
   /* padding-top: 372px;
@@ -107,11 +105,8 @@ section {
 
 .slider {
   margin: auto auto;
+  margin-bottom: 20px;
+  display: block;
   background-color: rgba(255, 0, 0, 0);
   border-color: rgba(255, 0, 0, 0);
-}
-
-.slider {
-  display: block;
-  margin-bottom: 20px;
 }
