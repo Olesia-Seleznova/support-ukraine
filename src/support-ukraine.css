@@ -1,9 +1,8 @@
 section {
-  margin: auto auto;
+  margin-right: 20px;
+  margin-left: 20px;
   width: 335px;
   height: 352px;
-  /* padding-top: 372px;
-  padding-left: 20px; */
   border-radius: 16px;
   background: radial-gradient(
     183.6% 183.01% at 59.76% -23.42%,
@@ -24,7 +23,7 @@ section.active {
 .funds__list {
   width: 159px;
   height: 188px;
-  padding: 0;
+  padding: 0px;
   margin-left: 40px;
   overflow: hidden;
   transition: heigh 03s ease;
@@ -34,50 +33,58 @@ section.active {
   height: auto;
 }
 
+.slider {
+  margin: 16px auto 0px auto;
+  display: block;
+  background-color: rgba(255, 0, 0, 0);
+  border-color: rgba(255, 0, 0, 0);
+}
+
 @media screen and (min-width: 768px) {
   .section {
-    width: 335px;
+    width: 356px;
     height: 474px;
-    /* margin-top: 112px; */
     margin-left: 401px;
   }
 
   .container {
     width: 100%;
     max-width: 768px;
-    /* padding: 0 32px; */
   }
 
   .funds__list {
-    width: 159px;
     height: 292px;
+  }
+
+  .support_Ukraine {
+    padding-right: 87px;
+  }
+
+  .slider {
+    margin: 24px auto 0px auto;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .section {
-    /* padding: 80px 0; */
     width: 356px;
     height: 474px;
-    /* margin-top: 670px; */
     margin-left: 24px;
   }
 
   .container {
     max-width: 1252px;
-    /* padding: 0 38px; */
   }
 }
 
 .fund__li {
   height: 32px;
-  padding: 0;
-  margin-bottom: 16px;
+  margin-top: 20px;
   list-style: none;
 }
 
-.fund__li:last-child {
-  margin-bottom: 0px;
+.fund__li:first-child {
+  margin-top: 0px;
 }
 
 .fund_numder {
@@ -90,6 +97,7 @@ section.active {
 
 .support_Ukraine {
   padding-top: 24px;
+  padding-right: 102px;
   padding-left: 40px;
   display: inline;
 }
@@ -105,12 +113,4 @@ section.active {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-}
-
-.slider {
-  margin: auto auto;
-  margin-bottom: 20px;
-  display: block;
-  background-color: rgba(255, 0, 0, 0);
-  border-color: rgba(255, 0, 0, 0);
 }
