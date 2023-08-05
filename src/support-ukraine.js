@@ -32,10 +32,13 @@ function updateContainerHeight() {
 
 const sliderBtn = document.getElementById('sliderBtn');
 
-document.addEventListener('click', removeSlider);
+fundsContainer.addEventListener('mouseleave', onMouseleave);
 
-function removeSlider(evt) {}
+function onMouseleave() {
+  fundsMenu.classList.remove('active');
+}
 
+//
 // "[
 //   {
 //     title: 'Save the Children',
