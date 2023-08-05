@@ -1,44 +1,15 @@
 const refs = {
   funds: document.querySelector('.funds'),
   slider: document.querySelector('.slider'),
-  sliderBtn: document.querySelector('.slider_btn'),
 };
 
 refs.slider.addEventListener('click', onSliderClick);
 
 function onSliderClick() {
-  const fundsMenu = document.getElementById('fundsList');
-
-  fundsMenu.classList.toggle('active');
-  updateContainerHeight();
+  fundsList.classList.toggle('active');
 }
 
-function updateContainerHeight() {
-  const fundsMenu = document.getElementById('fundsList');
-  const fundsContainer = document.getElementById('container');
-  const listOfFunds = fundsMenu.getElementsByClassName('fund__li');
-
-  const isExpended = fundsMenu.classList.contains('active');
-  if (isExpended) {
-    const totalHeight = Array.from(listOfFunds).reduce(
-      (acc, fund) => acc + refs.fund.clientHeight,
-      0
-    );
-    fundsContainer.style.height = `${totalHeight}px`;
-  } else {
-    fundsContainer.style.remove('active');
-  }
-}
-
-const sliderBtn = document.getElementById('sliderBtn');
-
-fundsContainer.addEventListener('mouseleave', onMouseleave);
-
-function onMouseleave() {
-  fundsMenu.classList.remove('active');
-}
-
-//
+// //
 // "[
 //   {
 //     title: 'Save the Children',
